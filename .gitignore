@@ -1,3 +1,14 @@
+# IMDb list data and databases
+*.list
+*.list.gz
+*.db
+*.csv
+*.sqlite
+rating_scale.txt
+
+# Autosave files
+*~
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
