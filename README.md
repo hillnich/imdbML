@@ -1,7 +1,4 @@
-# imdbML
-Exercises in Machine Learning using the IMDb.
-
-### Constructing MySQL database
+### Constructing IMDb MySQL database
 Start by downloading into IMDb list data that you want included in your SQL database.  These are made available as plain text data files from IMDb and are made available on several ftp sites found here: http://www.imdb.com/interfaces
 
 If you then place those in the `data` directory and are running a MySQL databaseserver, you can execute the following to build your IMDb MySQL database representing all the downloaded lists in `data` with:
