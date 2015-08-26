@@ -7,6 +7,7 @@ import math
 import random
 from glob import glob
 from collections import defaultdict, Counter
+from stemming.porter import stem
 
 class NaiveBayesClassifier:
 
@@ -41,7 +42,8 @@ def tokenize(message):
 
     message = message.lower()
     all_words = re.findall("[a-z0-9']+", message)
-    return set(all_words)
+    words = [stem(word) for word in all_words]
+    return set(words)
 
 
 def count_words(training_set):
@@ -57,6 +59,7 @@ def count_words(training_set):
 
         for word in tokenize(message):
 
+            #word = stem(word)
             counts[word][0 if is_spam else 1] += 1
 
     return counts
