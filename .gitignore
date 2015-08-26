@@ -6,6 +6,9 @@
 *.sqlite
 rating_scale.txt
 
+# Spam data
+spam_data/*/
+
 # Autosave files
 *~
 
