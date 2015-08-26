@@ -13,12 +13,11 @@ Note: The SQL queries in imdbML.py assume a MySQL database.
 ### Grabbing Spam Dataset
 To run `naiveBayes_spam.py`, grab all the `20021010*bz2` files from http://spamassassin.apache.org/publiccorpus/
 
-Then, make sure you've installed the Python stemming module:
-```
-pip install stemming
-```
-
 Untar them in the `spam_data` directory, and then Naive Bayes classifer can be run from the command line:
 ```
 python naiveBayes_spam.py
+```
+Then, make sure you've installed the Python stemming module:
+```
+pip install stemming
 ```
