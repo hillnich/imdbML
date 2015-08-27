@@ -36,7 +36,7 @@ class NaiveBayesClassifier:
 def tokenize(message):
     
     """
-    Counts all the words in message and returns them as a
+    Finds all the words in message and returns them as a
     unique set
     """
 
