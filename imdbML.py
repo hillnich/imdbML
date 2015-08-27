@@ -23,12 +23,32 @@ def parseMPAARatings(password, dbase="imdb.db"):
 
     return df
 
+
+def pluckReason(df):
+
+    """
+    Plucks the reason for a rating from the 
+    pandas dataframe 'info' key and returns
+    """
+
+    def safeSub(pat, x):
+        try:
+            return re.sub(pat, '', x)
+        except:
+            print x
+            return x
+    
+    pat = re.compile('^(Rated)\s*(\sG|PG\s|PG-13\s|PG- 13|R\s|NC-17\s)\s*(for)*\s*')
+    vmatch = np.vectorize(lambda x: safeSub(pat,x))
+    reason = np.array([r for r in vmatch(df['info'].values)])
+
+    return reason
+    
 def pluckRating(df):
 
     """
     Plucks the G, PG, PG-13, R rating from the 
-    pandas dataframe 'info' key and adds it as another entry
-    in the dataframe
+    pandas dataframe 'info' key and returns it
     """
 
     def safeSearch(pat, x):
