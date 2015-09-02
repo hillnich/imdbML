@@ -22,3 +22,10 @@ At this point, the Naive Bayes classifer can be run from the command line:
 python naiveBayes_spam.py
 ```
 
+### Dependent Python Modules
+```
+pandas
+MySQLdb
+scikit-learn
+numpy
+```
